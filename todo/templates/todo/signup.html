@@ -1,0 +1,28 @@
+{% extends 'todo/base_visitor.html' %}
+{% block title %}Create a new Account{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="loginformContainer">
+            <h2 class="center">Create an Account</h2>
+            <form class="form-group" role="form" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                {% for field in form %}
+                    <div class="form-group">
+                        <div>
+                            <span class="text-danger small">{{ field.errors }}</span>
+                        </div>
+                        <label>{{ field.label_tag}}</label>
+                        <div>{{ field }}</div>
+                    </div>
+                {% endfor %}
+                <div class="form-group">
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+            <div class="center">Already have an account <a href="{% url 'todo:loginUser' %}">LogIn</a></div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,91 @@
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+ .container {
+   width: 970px;
+ }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/*---------------------------------------*/
+.container-fluid{
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.col-md-8 {
+  float: left;
+  width: 66.66%;
+  padding: 10px;
+}
+.col-md-6 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+.col-md-4 {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+}
+@media screen and (max-width:800px) { 
+  .col-md-4 { 
+    width:100%; 
+  } 
+} 
+@media screen and (max-width:600px) { 
+  .col-md-4 { 
+    width: 100%; 
+  } 
+} col-md-4
+@media screen and (max-width:400px) { 
+  .col-md-4{ 
+    width: 100%; 
+  } 
+}
+.col-md-3 {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+.col-md-2 {
+  float: left;
+  width: 16.66%;
+  padding: 10px;
+}
+@media screen and (max-width:800px) { 
+  .col-md-2 { 
+    width: 50%; 
+  } 
+} 
+@media screen and (max-width:600px) { 
+  .col-md-2 { 
+    width: 50%; 
+  } 
+} 
+@media screen and (max-width:400px) { 
+  .col-md-2{ 
+    width: 100%; 
+  } 
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

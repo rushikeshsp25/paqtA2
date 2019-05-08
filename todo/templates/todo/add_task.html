@@ -1,0 +1,20 @@
+{% extends 'todo/base.html' %}
+{% block title %}Add a Task{% endblock %}
+{% block body %}
+    <div class="container-fluid">
+        <div class="addtaskContainer container">
+            <h2 class="center">Task</h2>
+            <form class="form-group" role="form" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div>
+                        <span class="text-danger small">{{ field.errors }}</span>
+                    </div>
+                    <label>{{ field.label_tag}}</label>
+                    <div>{{ field }}</div>
+                {% endfor %}
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

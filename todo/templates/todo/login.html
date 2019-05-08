@@ -1,0 +1,17 @@
+{% extends 'todo/base_visitor.html' %}
+{% block title %}LogIn to your Account{% endblock %}
+{% block body %}
+    <div class="container">
+        <div class="loginformContainer">
+            <h2 class="center">Log in to your account</h2>
+            <form method="post" action="{% url 'todo:loginUser' %}">
+                {% csrf_token %}
+
+                <input type="text" id="username" name="username" placeholder="Your username" required>
+                <input type="password" id="password" name="password" placeholder="Your password" required>
+                <input type="submit" value="LogIn">
+            </form>
+            <div class="center">Don't have an account <a href="{% url 'todo:createNewUser' %}">SignUp</a></div>
+        </div>
+    </div>
+{% endblock %}
