@@ -1,0 +1,4 @@
+db.sqlite3
+.idea
+/todo/__pycache__
+/todo/migrations
