@@ -13,7 +13,7 @@ body {
 }
 .navbar .navbar-brand{
   font-family: 'Akronim', cursive;
-  font-size: 40px;
+  font-size: 30px;
 }
 /*login styles*/
 input[type=text], input[type=password],input[type=email],textarea{
@@ -65,7 +65,8 @@ input[type=submit]:hover,button[type=submit]:hover{
   border-radius: 5px;
   border: 1px solid #ccc;
   padding: 20px;
-  width: 70%;
+  width: 500px;
+  max-width: 400px;
   margin: 80px auto;
 }
 .addtaskContainer{
