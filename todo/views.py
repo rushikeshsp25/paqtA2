@@ -22,7 +22,7 @@ def loginUser(request):
             else:
                 return render(request, 'todo/login.html', {'error_message': 'Your account has been disabled'})
         else:
-            return render(request, 'todo/login.html', {'error_message': 'Invalid login'})
+            return render(request, 'todo/login.html', {'error_message': 'Invalid Username or password'})
     else:
         return render(request,'todo/login.html')
 
@@ -30,9 +30,6 @@ def loginUser(request):
 def logoutUser(request):
     logout(request)
     return redirect('todo:loginUser')
-
-def createNewUser(request):
-    return HttpResponse("todo createNewUser")
 
 def createNewUser(request):
     if request.method == "POST":

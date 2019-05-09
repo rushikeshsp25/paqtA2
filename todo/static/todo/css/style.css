@@ -5,26 +5,29 @@ body {
 .center{
   text-align:center;
 }
+.container-fluid{
+  padding-left: 0;
+  padding-right: 0;
+}
 /*navbar styles */
 .navbar {
   background-color: #00838f;
   padding-top: 0;
   padding-bottom: 0;
+  font-size: 2vh;
 }
-.navbar .navbar-brand{
+.navbar .navbar-brand {
   font-family: 'Akronim', cursive;
-  font-size: 30px;
+  font-size: 5vh;
 }
-/*login styles*/
 input[type=text], input[type=password],input[type=email],textarea{
   width: 100%;
   padding: 15px 20px;
-  margin: 8px 0;
+  margin: 12px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-  font-size:16px;
   font-family: 'Lato', sans-serif;
   letter-spacing: 2px;
 }
@@ -38,10 +41,9 @@ input[type=submit],button[type=submit]{
   text-decoration: none;
   display: inline-block;
   font-family: 'Lato', sans-serif;
-  font-size: 16px;
   font-weight: bold;
   letter-spacing: 2px;
-  margin:8px 0 30px 0;
+  margin:12px 0 30px 0;
   cursor: pointer;
   color: rgba(255,255,255,1);
   -webkit-transition: all 0.5s;
@@ -64,17 +66,32 @@ input[type=submit]:hover,button[type=submit]:hover{
 .loginformContainer {
   border-radius: 5px;
   border: 1px solid #ccc;
-  padding: 20px;
-  width: 500px;
-  max-width: 400px;
-  margin: 80px auto;
+  padding:20px;
+  width: 40%;
+  margin: 80px auto 80px auto;
+}
+.loginformContainer h2{
+  margin-bottom: 30px;
 }
 .addtaskContainer{
   border-radius: 5px;
   border: 1px solid #ccc;
-  padding: 20px;
-  margin: 80px auto;
+  padding:20px;
+  width: 90%;
+  margin: 80px auto 80px auto;
 }
+@media screen and (max-width: 992px) {
+  .loginformContainer,.addtaskContainer {
+    margin: 50px auto 0 auto;
+    width: 90%;
+    font-size: 40px;
+  }
+  .loginformContainer h2,.addtaskContainer h2{
+    font-size: 60px;
+    font-weight: bold;
+  }
+}
+
 .card{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }

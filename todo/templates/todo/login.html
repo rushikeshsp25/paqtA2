@@ -1,9 +1,14 @@
 {% extends 'todo/base_visitor.html' %}
 {% block title %}LogIn to your Account{% endblock %}
 {% block body %}
-    <div class="container">
+    <div class="container-fluid">
         <div class="loginformContainer">
             <h2 class="center">Log in to your account</h2>
+            {% if error_message %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error_message }}
+                </div>
+            {% endif %}
             <form method="post" action="{% url 'todo:loginUser' %}">
                 {% csrf_token %}
 
